@@ -1,5 +1,9 @@
 # Import data into R
-data <- read.csv("all2015.csv", header = FALSE)
+data15 <- read.csv("all2015.csv", header = FALSE)
+data16 <- read.csv("all2016.csv", header = FALSE)
+data17 <- read.csv("all2017.csv", header = FALSE)
+data18 <- read.csv("all2018.csv", header = FALSE)
+data <- rbind(data15,data16,data17,data18)
 # Rename the columns
 fields <- read.csv("fields.csv")
 names(data) <- fields[, "Header"]
